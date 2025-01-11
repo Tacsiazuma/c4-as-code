@@ -1,0 +1,19 @@
+name: Validate Structurizr DSL
+
+on:
+  pull_request:
+    paths:
+      - '**/*.dsl'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Validate Structurizr DSL
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/usr/local/structurizr" structurizr/cli \
+          validate -workspace workspace.dsl

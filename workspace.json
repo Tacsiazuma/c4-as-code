@@ -1,0 +1,28 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 0,
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "user",
+      "properties" : {
+        "structurizr.dsl.identifier" : "u"
+      },
+      "tags" : "Element,Person"
+    } ]
+  },
+  "name" : "Name",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgIG1vZGVsIHsgCiAgICAgdSA9IHBlcnNvbiAidXNlciIKICAgICAgICAgCiAgICB9CiAgICB2aWV3cyB7CiAgICAgICAgCiAgICB9Cn0="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "styles" : { },
+      "terminology" : { }
+    }
+  }
+}

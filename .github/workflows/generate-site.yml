@@ -19,7 +19,7 @@ jobs:
           -v "${{ github.workspace }}:/var/model" \
           ghcr.io/avisi-cloud/structurizr-site-generatr \
             generate-site \
-            --workspace /workspace/workspace.dsl \
+            --workspace-file /workspace/workspace.dsl \
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

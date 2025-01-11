@@ -1,0 +1,28 @@
+name: Deploy Structurizr Site with Docker
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Generate Structurizr site using Docker
+      run: |
+        docker run --rm \
+          -v "${{ github.workspace }}:/var/model" \
+          ghcr.io/avisi-cloud/structurizr-site-generatr \
+            generate-site \
+            --workspace /workspace/workspace.dsl \
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build/site/master

@@ -1,9 +1,9 @@
 workspace {
     model { 
-     person "user"
+     u = person "user"
          
     }
-    view {
+    views {
         
     }
 }

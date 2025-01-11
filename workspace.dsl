@@ -3,7 +3,7 @@ workspace {
      person "user"
          
     }
-    views {
+    view {
         
     }
 }
